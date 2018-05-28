@@ -27,7 +27,7 @@ def items
   items_all = []
     @customer.each do | item_title|
 
-      if quantity = 1..item_title[:quantity]
+      for q in 1..item_title[:quantity]
         items_all << item_title[:item]
       end
     end
